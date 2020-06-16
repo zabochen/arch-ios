@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MVPViewController" customModule="arch_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVP Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIv-Ws-6Yf">
+                                <rect key="frame" x="166" y="164" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cD-bz-OJ2">
+                                <rect key="frame" x="132" y="285" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GJd-Ah-N0J"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="T1I-nS-nsQ"/>
+                                </constraints>
+                                <state key="normal" title="Change Label"/>
+                                <connections>
+                                    <action selector="actionPressChangeLabelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsC-1k-9Gz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7cD-bz-OJ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="0pC-eW-952"/>
+                            <constraint firstItem="dIv-Ws-6Yf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="1Qj-lN-oG9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dIv-Ws-6Yf" secondAttribute="trailing" constant="166" id="ARg-5R-pVr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7cD-bz-OJ2" secondAttribute="trailing" constant="132" id="JL3-Fg-lr7"/>
+                            <constraint firstItem="dIv-Ws-6Yf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="gYR-ac-2NV"/>
+                            <constraint firstItem="7cD-bz-OJ2" firstAttribute="top" secondItem="dIv-Ws-6Yf" secondAttribute="bottom" constant="100" id="v9r-ZU-qVw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mvpLabel" destination="dIv-Ws-6Yf" id="Pg6-UQ-ktX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="kIX-5v-Wfi" customClass="MVPConfigurator" customModule="arch_ios" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="a9g-ic-MH5"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="141" y="113"/>
+        </scene>
+    </scenes>
+</document>
